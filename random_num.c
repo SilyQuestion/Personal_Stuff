@@ -9,7 +9,6 @@
 int main(void)
 {
     int array[SUP];
-    int a_size;
     time_t t;
 
     srand((unsigned)time(&t));
@@ -17,8 +16,7 @@ int main(void)
         array[i] = i + 1;
     }
 
-    a_size = SUP;
-    for(; a_size > SUP - N; --a_size) {
+    for(int a_size = SUP; a_size > SUP - N; --a_size) {
         int k = rand() % a_size;
         printf("%2d\n", array[k]);
         array[k] = array[a_size - 1];
@@ -26,3 +24,4 @@ int main(void)
 
     return EXIT_SUCCESS;
 }
+
