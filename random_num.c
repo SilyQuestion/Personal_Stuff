@@ -9,17 +9,17 @@
 int main(void)
 {
     int array[SUP];
-    int i, k, a_size;
+    int a_size;
     time_t t;
 
     srand((unsigned)time(&t));
-    for(i = 0; i < SUP; ++i) {
+    for(int i = 0; i < SUP; ++i) {
         array[i] = i + 1;
     }
 
     a_size = SUP;
     for(; a_size > SUP - N; --a_size) {
-        k = rand() % a_size;
+        int k = rand() % a_size;
         printf("%2d\n", array[k]);
         array[k] = array[a_size - 1];
     }
