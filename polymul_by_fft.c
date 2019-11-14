@@ -137,7 +137,7 @@ static void _fft
     cmplx *out = malloc(n * sizeof(cmplx));
     check_alloc(vec);
 
-	for (uint32_t i = 0; i < n; i++) {
+    for (uint32_t i = 0; i < n; i++) {
         out[i] = vec[i];
     }
     _fft(vec, out, n, 1, arg);
