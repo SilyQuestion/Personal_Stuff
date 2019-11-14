@@ -135,7 +135,7 @@ static void _fft
  static void fft(cmplx *vec, uint32_t n, double arg)
 {
     cmplx *out = malloc(n * sizeof(cmplx));
-    check_alloc(vec);
+    check_alloc(out);
 
     for (uint32_t i = 0; i < n; i++) {
         out[i] = vec[i];
@@ -150,7 +150,7 @@ static void ifft(cmplx *vec, uint32_t n, double arg)
     cmplx *out = malloc(n * sizeof(cmplx));
     uint32_t i;
     
-    check_alloc(vec);
+    check_alloc(out);
     
     for (i = 0; i < n; i++) {
         out[i] = vec[i];
