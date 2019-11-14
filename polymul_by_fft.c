@@ -140,8 +140,7 @@ static void _fft
 	for (uint32_t i = 0; i < n; i++) {
         out[i] = vec[i];
     }
-
-	_fft(vec, out, n, 1, arg);
+    _fft(vec, out, n, 1, arg);
 
     free(out);
 }
